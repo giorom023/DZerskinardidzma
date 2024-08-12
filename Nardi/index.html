@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgammon Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="jail" id="jail"></div>
+        <div class="out" id="out"></div>
+        <div class="backgammon" id="backgammon">
+            <div class="point" data-id="1" data-home="black">
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+            </div>
+            <div class="point" data-id="2"></div>
+            <div class="point" data-id="3"></div>
+            <div class="point" data-id="4"></div>
+            <div class="point" data-id="5"></div>
+            <div class="point" data-id="6" data-home="black">
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+            </div>
+            <div class="midLane"></div>
+            <div class="point" data-id="7"></div>
+            <div class="point" data-id="8"></div>
+            <div class="point" data-id="9"></div>
+            <div class="point" data-id="10"></div>
+            <div class="point" data-id="11"></div>
+            <div class="point" data-id="12">
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+            </div>
+            <div class="point" data-id="13"></div>
+            <div class="point" data-id="14"></div>
+            <div class="point" data-id="15"></div>
+            <div class="point" data-id="16"></div>
+            <div class="point" data-id="17">
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+            </div>
+            <div class="point" data-id="18"></div>
+            <div class="midLane"></div>
+            <div class="point" data-id="19" data-home="white">
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+            </div>
+            <div class="point" data-id="20"></div>
+            <div class="point" data-id="21"></div>
+            <div class="point" data-id="22"></div>
+            <div class="point" data-id="23"></div>
+            <div class="point" data-id="24" data-home="white">
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+            </div>
+        </div>
+        <div class="controller">
+            <button type="button" id="btnStart">Start</button>
+            <div id="turnOf" class="hidden"></div>
+            <button type="button" id="btnRoll" class="hidden">Roll</button>
+            <div id="movesLeft" class="hidden">
+                <span></span>
+                <span></span>
+            </div>
+            <button type="button" id="btnChangeColors">Change Colors</button>
+        </div>
+    </div>
+
+    <!-- Color Picker Modal -->
+    <div id="colorPickerModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Select Checker Colors</h2>
+            <div class="color-options">
+                <button class="color-choice" data-color="red" style="background-color: red;"></button>
+                <button class="color-choice" data-color="green" style="background-color: green;"></button>
+                <button class="color-choice" data-color="blue" style="background-color: blue;"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
